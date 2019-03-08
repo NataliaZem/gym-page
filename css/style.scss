@@ -65,6 +65,12 @@ body {
     }
 }
 
+@media screen and (min-width: 768px) {
+    body {
+        font-size: 12px;
+    }
+}
+
 /* header */
 header {
     width: 100%;
@@ -156,9 +162,24 @@ header {
     }
 }
 
+/* banner 768 */
+@media screen and (min-width: 768px){
+    .banner {
+        background-position: 60%;
+        &--info {
+            margin-bottom: 0;
+        }
+        &--form {
+            width: 50%;
+            transform: translateX(100%);
+        }
+    }
+}
+
 /* banner 1200+ */
 @media screen and (min-width: 1200px){
     .banner {
+        padding-bottom: 300px;
         h3 {
             letter-spacing: 15px;
             font-size: 1em;
@@ -167,17 +188,33 @@ header {
             font-size: 10em;
             letter-spacing: 15px;
         }
+        &--form {
+            form {
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+            }
+            input[type=text], [type=email] {
+                width: 48%;
+            }
+            button {
+                transform: translateX(168%);
+            }
+        }
      }
 }
 
 /* offert */
 .offert {
+    display: flex;
+    flex-direction: column;
     button {
         border-color: $accent-color;
         font-size: 1.5em;
     }
     &--list {
         width: 100%;
+        background-color: #ffffff;
         h4 {
             padding: 40px 40px 0 40px;
         }
@@ -201,7 +238,7 @@ header {
         text-align: center;
         padding: 80px 40px;
         color: $font-color-main;
-        background-image: url('../assets/img/diego-ph-222506-unsplash.jpg');
+        background-image: linear-gradient(rgba(16,23,45,0.85) 50%),url(https://www.elegantthemes.com/layouts/wp-content/uploads/2018/10/gym_39.jpg);
         background-size: cover;
         background-position: top;
         h6 {
@@ -218,6 +255,36 @@ header {
         }
         button {
             color: $font-color-main;
+        }
+    }
+}
+
+/* offert 768 */
+@media screen and (min-width: 768px) {
+    .offert {
+        flex-direction: row;
+        &--list {
+            width: 50%;
+            transform: translateY(-40%);
+        }
+        &--cost {
+            width: 50%;
+        }
+    }
+}
+
+/* offert 1200+ */
+@media screen and (min-width: 1200px) {
+    .offert {
+        flex-direction: row;
+        justify-content: flex-end;
+        &--list {
+            width: 33%;
+            transform: translateY(-300px);
+        }
+        &--cost {
+            width: 33%;
+            transform: translateY(-300px);
         }
     }
 }
@@ -282,14 +349,92 @@ header {
         padding: 40px 0;
         z-index: -1;
         width: 50%;
-        background-image: url('../assets/img/diego-ph-222506-unsplash.jpg');
-        background-position: top;
+        background-image: linear-gradient(rgba(16,23,45,0.85) 50%),url(https://www.elegantthemes.com/layouts/wp-content/uploads/2018/10/gym_39.jpg);
         background-size: cover;
         .f2 {
             display: none;
             background-image: url('../assets/img/adult-beautiful-biceps-1554824.jpg');
             height: 300px;
             transform: translate(-95.5%, 100%);
+        }
+    }
+}
+
+/* aside photo 768 */
+@media screen and (min-width: 768px) {
+    .photo-first {
+        .foto {
+            width: 90%;
+        }
+        button {
+            transform: translateX(110%);
+        }
+        .photo--red {
+            padding-bottom: 0;
+            z-index: -1;
+            .f1 {
+                height: 250px;
+                transform: translateX(11.2%);
+            }
+        }
+        .photo--dark {
+            padding-bottom: 0;
+            .f2 {
+                display: flex;
+                background-image: url('../assets/img/adult-beautiful-biceps-1554824.jpg');
+                height: 400px;
+                transform: translate(0%);
+                margin-top: 250px;
+                margin-bottom: 0;
+            }
+            .f3 {
+                background-image: url('../assets/img/victor-freitas-572863-unsplash.jpg');
+                height: 250px;
+                margin: 0;
+                transform: translateX(-100%);
+            }
+        }
+    }
+}
+
+/* aside photo 1200+ */
+@media screen and (min-width: 1200px) {
+    .photo-first {
+        margin: 200px auto;
+        .foto {
+            width: 45%;
+            box-shadow: -50px 70px 120px -42px rgba(0,0,0,0.3);
+        }
+        button {
+            transform: translate(144%, -361px);
+        }
+        .photo--red {
+            margin-left: 80px;
+            height: 400px;
+            padding-bottom: 0;
+            z-index: -1;
+            .f1 {
+                height: 350px;
+                transform: translate(122.5%, 100px);
+            }
+        }
+        .photo--dark {
+            padding-bottom: 0;
+            height: 400px;
+            .f2 {
+                display: flex;
+                background-image: url('../assets/img/adult-beautiful-biceps-1554824.jpg');
+                height: 250px;
+                transform: translateY(-400px);
+                margin-top: 250px;
+                margin-bottom: 0;
+            }
+            .f3 {
+                background-image: url('../assets/img/victor-freitas-572863-unsplash.jpg');
+                height: 300px;
+                margin: 0;
+                transform: translate(100%, -400px);
+            }
         }
     }
 }
@@ -307,6 +452,14 @@ header {
        padding-right: 10px;
        color: #000000;
    }
+}
+
+/* article-secound 768 */
+@media screen and (min-width: 768px) {
+    .article-secound {
+        padding: 50px 55px;
+        text-align: right;
+    }
 }
 
 /* aside cubes */
@@ -344,6 +497,16 @@ header {
         border-color: $accent-color;
         color: #000000;
         margin: 40px 0;
+    }
+}
+
+/* aside cubes */
+@media screen and (min-width: 768px) {
+    .cubes-first {
+        padding: 50px 70px;
+        button {
+            margin: 40px;
+        }
     }
 }
 
@@ -388,6 +551,32 @@ header {
             background-size: cover;
             margin: 50px 0 25px 0;
             box-shadow: 0px 12px 18px -6px rgba(0,0,0,0.3);
+        }
+    }
+}
+
+/* article-third */
+@media screen and (min-width: 768px)  {
+    .article-third {
+        padding: 50px 70px;
+        text-align: center;
+        button {
+            margin-bottom: 100px;
+        }
+        &--comment {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            text-align: left;
+            margin-bottom: 50px;
+            div {
+                width: 80%;
+            }
+            .article-third--comment-photo {
+                width: 18%;
+                margin-right: 50px;
+                margin-top: -100px;
+            }
         }
     }
 }
@@ -444,7 +633,7 @@ header {
         .article-fourth--red {
             font-family: $font-family-paragraphs;
             font-weight: 400;
-            padding: 80px 40px;
+            padding: 60px 40px;
             background-color: $accent-color;
             &-up {
                 padding: 40px 30px;
@@ -467,6 +656,18 @@ header {
                 }
             }
         }  
+    }
+}
+
+/* article-fourth 768 */
+@media screen and (min-width: 768px) {
+    .article-fourth {
+        &--wrapper {
+            .article-fourth--red {
+                width: 80%;
+                margin: 0 auto;
+            }
+        }
     }
 }
 
