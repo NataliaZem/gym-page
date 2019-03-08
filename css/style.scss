@@ -1,0 +1,495 @@
+/* font family */
+$font-family-paragraphs: 'Open Sans', sans-serif;
+$font-family-headers-1: 'Oswald', sans-serif;
+$font-family-headers-2: 'Poppins', sans-serif;
+
+/* colors */
+$font-color-main: #ffffff;
+$accent-color: #fa2a20;
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-size: 10px;
+    a {
+        text-decoration: none;
+        color: #000000;
+    }
+
+    ol {
+        list-style-type: none;
+        margin: 0;
+        padding: 0; 
+    }
+
+    .container {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 15px;
+    }
+    p {
+        font-size: 1.4em;
+        font-family: $font-family-paragraphs;
+        line-height: 2;
+        color: rgba(0,0,0,0.8);
+    }
+    button {
+        padding: 20px 28px;
+        background-color: transparent;
+        border: 1px solid #ffffff;
+        text-transform: uppercase;
+        font-weight: 500;
+        font-size: 1.6em;
+        font-family: $font-family-headers-1;
+        letter-spacing: 4px;
+        color: $font-color-main;
+    }
+    .red-bottom {
+        border: 0;
+        border-bottom: 2px solid $accent-color;
+    }
+    h2, h3, h4, h5, h6 {
+        font-family: $font-family-headers-1;
+        font-size: 2.2em;
+        font-weight: 500;
+        letter-spacing: 5px;
+    }
+    h4 {
+        font-weight: 400;
+        font-size: 2.2em;
+        margin-bottom: 25px;
+    }
+}
+
+/* header */
+header {
+    width: 100%;
+    padding: 15px 35px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    font-family: $font-family-headers-2;
+    nav {
+        width: 40%;
+        ol {
+            display: none;
+            flex-direction: row;
+            justify-content: space-between;
+            font-size: 1.5em;
+            text-transform: uppercase;
+        }
+    }
+}
+
+/* banner */
+.banner {
+    padding-top: 100px;
+    background-image: url('../assets/img/boxing-dark-fitness-163351.jpg');
+    background-position: center;
+    background-size: cover;
+    &--text {
+        text-transform: uppercase;
+        color: $font-color-main;
+        h3 {
+            letter-spacing: 8px;
+            font-size: .9em;
+        }
+        h2 {
+            margin-bottom: 25px;
+            font-size: 5.2em;
+            font-weight: 300;
+            letter-spacing: 10px;
+            line-height: 1.5;
+        }
+    }
+    &--info {
+        width: 100%;
+        margin: 45px 0;
+        padding: 20px 0;
+        background-image: linear-gradient(90deg,rgba(0,0,0,0) 15%,#2a2e40 100%);
+        color: $font-color-main;
+        font-size: .7em;
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-end;
+        p {
+            color: $font-color-main;
+            margin-right: 10px;
+        }
+    }
+    &--form {
+        color: $font-color-main;
+        background-color: $accent-color;
+        padding: 60px 40px;
+        h4 {
+            line-height: 1.5;
+            margin-bottom: 20px;
+        }
+        p {
+            line-height: 2;
+            margin-bottom: 10px;
+            color: $font-color-main;
+        }
+        input[type=text], [type=email] {
+            width: 100%;
+            background-color: $accent-color;
+            border: 0;
+            border-bottom: 1px solid #999999;
+            margin: 20px 0;
+            padding: 20px;
+            font-family: $font-family-headers-1;
+            letter-spacing: 3px;
+        }
+        input::placeholder {
+            color: rgba(0,0,0,0.3)
+        }
+        button {
+            font-size: 1.6em;
+            margin-left: 45%; 
+            margin-top: 20px;
+        }
+    }
+}
+
+/* banner 1200+ */
+@media screen and (min-width: 1200px){
+    .banner {
+        h3 {
+            letter-spacing: 15px;
+            font-size: 1em;
+        }
+        h2 {
+            font-size: 10em;
+            letter-spacing: 15px;
+        }
+     }
+}
+
+/* offert */
+.offert {
+    button {
+        border-color: $accent-color;
+        font-size: 1.5em;
+    }
+    &--list {
+        width: 100%;
+        h4 {
+            padding: 40px 40px 0 40px;
+        }
+        ol {
+            width: 100%;
+            font-family: $font-family-paragraphs;
+            font-weight: 600;
+            font-size: 1.5em;
+            color: rgba(0,0,0,.6);
+            li {
+                padding: 15px 40px;
+                width: 100%;
+            }
+        }
+        button {
+            margin: 20px 0 30px 40px;
+            color: #000000;
+        }
+    }
+    &--cost {
+        text-align: center;
+        padding: 80px 40px;
+        color: $font-color-main;
+        background-image: url('../assets/img/diego-ph-222506-unsplash.jpg');
+        background-size: cover;
+        background-position: top;
+        h6 {
+            letter-spacing: 12px;
+            font-size: 1.2em;
+            margin-bottom: 10px;
+        }
+        h5 {
+            font-size: 5.5em;
+        }
+        p {
+            color: $font-color-main;
+            margin: 50px 0;
+        }
+        button {
+            color: $font-color-main;
+        }
+    }
+}
+
+/* article-first */
+.article-first {
+    padding: 50px 25px;
+    text-align: center;
+    h5, h6 {
+        color: $accent-color;
+    }
+    h5 {
+        font-size: 3.5em;
+        letter-spacing: 5px;
+        margin-bottom: 10px;
+    }
+    h6 {
+        font-size: 1.1em;
+        letter-spacing: 15px;
+        line-height: 2;
+    }
+    h4 {
+        font-weight: 300;
+        font-size: 3em;
+        letter-spacing: 5px;
+        margin-top: 50px;
+    }
+    p {
+        margin: 20px 0;
+        
+    }
+    button {
+        color: #000000;
+    }
+}
+
+/* aside photo */
+.photo-first {
+    display: flex;
+    flex-direction: row;
+    position: relative;
+    button {
+        transform: translateX(80%);
+    }
+    .foto {
+        width: 180%;
+        background-size: cover;
+        margin-bottom: 40px;
+    }
+    .photo--red {
+        padding: 40px 0;
+        width: 50%;
+        background-color: $accent-color;
+        .f1 {
+            background-image: url('../assets/img/energy-exercise-gym-1552242.jpg');
+            height: 200px;
+            background-position: left;
+            transform: translateX(5.5%);
+        }
+    }
+    .photo--dark {
+        padding: 40px 0;
+        z-index: -1;
+        width: 50%;
+        background-image: url('../assets/img/diego-ph-222506-unsplash.jpg');
+        background-position: top;
+        background-size: cover;
+        .f2 {
+            display: none;
+            background-image: url('../assets/img/adult-beautiful-biceps-1554824.jpg');
+            height: 300px;
+            transform: translate(-95.5%, 100%);
+        }
+    }
+}
+
+/* article-secound */
+.article-secound {
+    padding: 50px 25px;
+    h4 {
+        font-size: 3em;
+        font-weight: 300;
+    }
+    button {
+        margin-top: 30px;
+       text-align: right;
+       padding-right: 10px;
+       color: #000000;
+   }
+}
+
+/* aside cubes */
+.cubes-first {
+    display: flex;
+    flex-direction: column;
+    padding: 0 30px;
+    h4 {
+        text-transform: uppercase;
+        font-size: 2.2em;
+    }
+    &-dark {
+        padding: 60px 40px;
+        background-color: #2a2e40;
+        color: $font-color-main;
+        box-shadow: -50px 70px 120px -42px rgba(0,0,0,0.3);
+        p {
+            color: $font-color-main;
+        }
+    }
+    &-white {
+        box-shadow: -50px 70px 120px -42px rgba(0,0,0,0.3);
+        padding: 60px 40px;
+    }
+    &-red {
+        box-shadow: -50px 70px 120px -42px rgba(0,0,0,0.3);
+        padding: 60px 40px;
+        background-color: $accent-color;
+        color: $font-color-main;
+        p {
+            color: $font-color-main;
+        }
+    }
+    button {
+        border-color: $accent-color;
+        color: #000000;
+        margin: 40px 0;
+    }
+}
+
+/* article-third */
+.article-third {
+    padding: 50px 25px;
+    h4 {
+        text-align: center;
+        text-transform: uppercase;
+        font-size: 3em;
+        font-weight: 300;
+        line-height: 2.5;
+        span {
+            font-weight: 800;
+            color: $accent-color;
+        }
+    }
+    button {
+        padding: 20px 20px;
+        color: #000000;
+        margin-bottom: 30px;
+    }
+    &--comments-wrapper {
+        display: flex;
+        flex-direction: column;
+    }
+    &--comment {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        .photo1 {
+            background-image: url('../assets/img/tikkho-maciel-158219-unsplash.jpg');
+        }
+        .photo2 {
+            background-image: url('../assets/img/jonathan-chen-241561-unsplash.jpg');
+        }
+        &-photo {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            background-position: center;
+            background-size: cover;
+            margin: 50px 0 25px 0;
+            box-shadow: 0px 12px 18px -6px rgba(0,0,0,0.3);
+        }
+    }
+}
+
+/* article-fourth */
+.article-fourth {
+    padding-top: 100px;
+    background-image: radial-gradient(circle at center,rgba(42,46,64,0) 0%,#2a2e40 70%),url(https://www.elegantthemes.com/layouts/wp-content/uploads/2018/10/gym_35.jpg);
+    color: $font-color-main;
+    h3 {
+        padding: 0 40px;
+        font-size: .9em;
+        text-transform: uppercase;
+        margin-bottom: 10px;
+    }
+    h2 {
+        padding: 0 40px;
+        font-size: 3.5em;
+        font-weight: 300;
+        letter-spacing: 10px;
+        text-transform: uppercase;
+    }
+    &--wrapper {
+        margin-top: 70px;
+        display: flex;
+        flex-direction: column;
+        .article-fourth--form {
+            padding: 0 40px;
+            input[type=text], [type=email], textarea {
+                width: 100%;
+                color: #ffffff;
+                background-color: transparent;
+                border: 0;
+                padding: 20px;
+                font-family: $font-family-headers-1;
+                letter-spacing: 3px;
+                border-bottom: 1px solid rgba(255,255,255,.8);
+            }
+            input::placeholder {
+                color: #ffffff;
+            }
+            textarea {
+                height: 150px;
+            }
+            button {
+                margin: 40px 0 80px;
+                transform: translateX(80%);
+            }
+        }
+        h4 {
+            text-transform: uppercase;
+            margin-bottom: 25px;
+        }
+        .article-fourth--red {
+            font-family: $font-family-paragraphs;
+            font-weight: 400;
+            padding: 80px 40px;
+            background-color: $accent-color;
+            &-up {
+                padding: 40px 30px;
+                margin-bottom: 40px;
+                box-shadow: 0px 26px 110px -30px rgba(0,0,0,.8);
+                ol {
+                    font-size: 1.4em;
+                    line-height: 2.5;
+                }
+            }
+            &-down {
+                padding: 40px 30px;
+                color: #000000;
+                background-color: #ffffff;
+                box-shadow: 0px 26px 110px -30px rgba(0,0,0,.8);
+                button {
+                    border-color: $accent-color;
+                    color: #000000;
+                    padding: 30px 20px;
+                }
+            }
+        }  
+    }
+}
+
+/* footer */
+footer {
+    background-color: rgba(0, 0, 0, 1);
+    color: #666;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    padding: 20px 0;
+    p {
+        order: 2;
+        color: #666;
+        font-size: 1.2em;
+    }
+    .footer--socials {
+        font-size: 2em;
+        a {
+            color: #666666;
+        }
+        i {
+            margin: 10px;
+        }
+    }
+}
